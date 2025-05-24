@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <h2 class="logo"><a href="#">Arasaka</a></h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="cart.html">Cart <span id="cart-badge" style="background:red; color:white; border-radius:50%; padding:2px 6px; font-size:12px; display:none; vertical-align:super; margin-left:4px;"></span></a></li>
+        <li><a href="logIn.html">Log In</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+
+  <section class="products-section">
+    <section class="website-intro-container">
+      <div>
+        <h2>Welcome</h2>
+      </div>
+      <p class="website-intro-details">Explore our premium camping gear designed to enhance your outdoor adventures with comfort and style.</p>
+    </section>
+    <h2>Our Products</h2>
+    <div class="product-grid horizontal-scroll">
+      <div class="product-card">
+        <img src="img/4-Person-Tent.avif" alt="4-Person-Tent">
+        <h3>4-Person Tent</h3>
+        <p class="description">Spacious, waterproof, family-friendly.</p>
+        <p class="price">$100</p>
+         <form action="buy.html" method="get">
+          <input type="hidden" name="name" value="4-Person Tent">
+          <input type="hidden" name="price" value="150">
+          <button type="submit" class="buy-btn">Buy Now</button>
+          <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card">
+        <img src="img/2-Person-Tent.webp" alt="2-Person Tent">
+        <h3>2-Person Tent</h3>
+        <p class="description">Compact and Lightweight for couples or solo campers.</p>
+        <p class="price">$150</p>
+        <form action="buy.html" method="get">
+          <input type="hidden" name="name" value="2-Person Tent">
+          <input type="hidden" name="price" value="150">
+          <button type="submit" class="buy-btn">Buy Now</button>
+          <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card">
+        <img src="img/Sleeping-Bag-3-Season.jfif" alt="Sleeping Bag 3 Season">
+        <h3>Sleeping Bag ( 3 Season )</h3>
+        <p class="description">Keeps you warm in temperature from 32°F to 50°F.</p>
+        <p class="price">$50</p>      
+        <form action="buy.html" method="get">
+          <input type="hidden" name="name" value="Sleeping-Bag-3-Season">
+          <input type="hidden" name="price" value="50">
+          <button type="submit" class="buy-btn">Buy Now</button>
+          <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+        </form>
+      </div>
+      <div class="product-card">
+        <img src="img/Sleeping-Bag-Winter-Ready.jpg" alt="Sleeping-Bag-Winter-Ready">
+        <h3>Sleeping Bag (Winter-Ready)</h3>
+        <p class="description">Insulated for extreme cold, down to 10°F.</p>
+        <p class="price">$45</p>
+        <form action="buy.html" method="get">
+          <input type="hidden" name="name" value="Sleeping-Bag-Winter-Ready">
+          <input type="hidden" name="price" value="45">
+          <button type="submit" class="buy-btn">Buy Now</button>
+          <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+        </form>
+      </div>
+    </div>
+</section>
+
+  <section class="portfolio" id="portfolio">
+    <h2>Our Camping Gallery</h2>
+    <p>Take a look at some of our memorable camping adventures.</p>
+    <ul class="cards">
+      <li class="card">
+        <img src="img/camping-10.jfif" alt="Mountain Hiking">
+        <h3>Mountain Hiking</h3>
+        <p>Embark on an exhilarating hiking adventure in the breathtaking mountain ranges.</p>
+      </li>
+      <li class="card">
+        <img src="img/camping-9.jfif" alt="Lakeside Camping">
+        <h3>Lakeside Camping</h3>
+        <p>Enjoy a tranquil camping experience by the serene shores of picturesque lakes.</p>
+      </li>
+      <li class="card">
+        <img src="img/camping-7.jfif" alt="Beach Camping">
+        <h3>Beach Camping</h3>
+        <p>Escape to sandy beaches and camp under the starry sky by the crashing waves.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <p>Discover our story in providing camping services.</p>
+    <div class="row company-info">
+      <h3>Our Story</h3>
+      <p>Experience the excellence of our camping gear and services, where we have been offering high-quality camping essentials and gear for outdoor enthusiasts for over a decade. Our commitment to quality and customer satisfaction ensures that every adventurer can rely on us for their camping needs.</p>
+    </div>
+    <div class="row mission-vision">
+      <h3>Our Mission</h3>
+      <p>At Camping Gear Experts, our mission is to equip outdoor enthusiasts with top-notch camping gear and essentials that enhance their outdoor experiences. We strive to provide reliable, durable, and innovative products that contribute to memorable adventures and lasting memories.</p>
+      <h3>Our Vision</h3>
+      <p>Our vision is to become the go-to destination for camping enthusiasts, known for our extensive selection of premium camping gear and exceptional customer service. We aspire to inspire and enable people to embrace the beauty of nature and create unforgettable camping experiences.</p>
+    </div>
+  
+  </section>
+  <section class="contact" id="contact">
+    <h2><b>Contact Us</b></h2>
+    <p>Reach out to us for any inquiries or feedback.</p>
+    <div class="row">
+      <div class="col information">
+        <div class="contact-details">
+          <p><i class="fas fa-map-marker-alt"></i>No.14, 161st, Tamwe Township, Yangon, Myanmar.</p>
+          <p><i class="fas fa-envelope"></i>zayarhtet2426@gmail.com</p>
+          <p><i class="fas fa-phone"></i>03780190166</p>
+          <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+          <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
+          <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+          <p><i class="fas fa-globe"></i> www.arsaka camping.com</p>
+        </div>          
+      </div>
+      <div class="col form">
+        <form>
+          <input type="text" placeholder="Name*" required>
+          <input type="email" placeholder="Email*" required>
+          <textarea placeholder="Message*" required></textarea>
+          <button id="submit" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer style="background: #000; color: #fff; text-align: center; padding: 20px; margin-top: 50px; font-family: Arial;">
+    <p>&copy;2025 | Arasaka Camping Website by Martinez | All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
+

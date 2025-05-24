@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success</title>
+    <link href="bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/success.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="celebration-container">
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        <div class="confetti"></div>
+        
+        <div class="success-card">
+            <div class="icon-wrapper">
+                <div class="icon-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            
+            <h1 class="success-title">Success!</h1>
+            <p class="success-subtitle">Your payment was processed successfully</p>
+            
+            <div class="order-highlights">
+                <div class="highlight-card">
+                    <i class="fas fa-receipt"></i>
+                    <span>Order #<span id="order-id">15478</span></span>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <span id="order-date">Today</span>
+                </div>
+            </div>
+            
+            <div class="order-breakdown">
+                <h3>Order Details</h3>
+                <div id="order-items" class="items-list"></div>
+                <div class="order-total">
+                    <span>Total Amount:</span>
+                    <span id="total-amount">$0.00</span>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="products.html" class="btn btn-primary">
+                    <i class="fas fa-shopping-bag"></i> Shop More
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/success.js"></script>
+</body>
+</html>

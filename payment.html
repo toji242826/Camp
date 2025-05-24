@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/payment-success.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .order-summary { background: white; border-radius: 8px; padding: 20px; }
+        .payment-card { border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .payment-header { border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 20px; }
+        .order-item { border-bottom: 1px solid #eee; padding: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-7 mb-4">
+                <div class="order-summary">
+                    <h2 class="mb-4">Order Summary</h2>
+                    <div id="order-items">
+                        <!-- Cart items will be loaded here -->
+                    </div>
+                    <div id="order-total" class="h4 mt-4 pt-3 border-top"></div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="payment-card p-4">
+                    <div class="payment-header">
+                        <h4>Payment Information</h4>
+                    </div>
+                    <form id="payment-form">
+                        <div class="mb-3">
+                            <label class="form-label">Card Number</label>
+                            <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Expiry Date</label>
+                                <input type="text" class="form-control" placeholder="MM/YY" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">CVV</label>
+                                <input type="text" class="form-control" placeholder="123" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Name on Card</label>
+                            <input type="text" class="form-control" placeholder="John Smith" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2">
+                            Complete Payment
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/payment-success.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkoutData = JSON.parse(localStorage.getItem('checkoutData'));
+            const orderItems = document.getElementById('order-items');
+            const orderTotal = document.getElementById('order-total');
+            
+            if (checkoutData && checkoutData.items) {
+                    checkoutData.items.forEach(item => {
+                        const itemElement = document.createElement('div');
+                        itemElement.className = 'order-item';
+                        itemElement.innerHTML = `
+                            <div class="row align-items-center">
+                                <div class="col-9">
+                                    <h6 class="mb-1">${item.name}</h6>
+                                    <small class="text-muted">Quantity: ${item.quantity}</small>
+                                </div>
+                                <div class="col-3 text-end">
+                                    <span class="fw-bold">$${(item.price * item.quantity).toFixed(2)}</span>
+                                </div>
+                            </div>
+                        `;
+                        orderItems.appendChild(itemElement);
+                    });
+                
+                orderTotal.textContent = `Total: ${checkoutData.total}`;
+            } else {
+                window.location.href = 'cart.html';
+            }
+
+            document.getElementById('payment-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Process payment here
+                // Show payment success modal
+                paymentSuccess.show();
+            });
+        });
+    </script>
+    <footer style="background: #000; color: #fff; text-align: center; padding: 20px; margin-top: 50px; font-family: Arial;">
+        <p>&copy; 2025 | Arasaka Camping Website by Martinez | All Rights Reserved.</p>
+      </footer>
+      
+</body>
+</html>
+ 
